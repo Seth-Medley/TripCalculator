@@ -28,22 +28,19 @@ System.Console.WriteLine();
 ///////////////////////////////////
 Console.WriteLine("=== Part 2: Pizza Party ===");
 const int pizzaSlices = 8;
-
 Console.Write("How many people are going: ");
 int peopleGoing = Convert.ToInt32(Console.ReadLine());
-
 Console.Write("How many pizzas: ");
 int pizzaAmt = Convert.ToInt32(Console.ReadLine());
-
 Console.Write("Price Per Pizza: ");
 double pizzaPrice = Convert.ToDouble(Console.ReadLine());
-
 int totalSlices = pizzaAmt * pizzaSlices;
 double slicesPerPerson = (double)totalSlices / peopleGoing;
 double pizzaTotalCost = pizzaAmt * pizzaPrice;
 
+// Calculates Pizza Prices, How many slices each person gets and how much each pizza costs.
 Console.WriteLine($"Total slices: {totalSlices}");
-Console.WriteLine($"Slices per person: {slicesPerPerson.ToString("F1")}"); // Calculates Pizza Prices, How many slices each person gets and how much each pizza costs.
+Console.WriteLine($"Slices per person: {slicesPerPerson.ToString("F1")}");
 Console.WriteLine($"Pizza cost: {pizzaTotalCost.ToString("C")}");
 System.Console.WriteLine();
 /////////////////////////////////////////
@@ -56,11 +53,11 @@ int hours = Convert.ToInt32(Console.ReadLine());
 Console.Write("Hourly rate: ");
 double hourlyRate = Convert.ToDouble(Console.ReadLine());
 
-
+// Calculates User gross pay, taxes withheld from pay, and how much pay they take home.
 double grossPay = hours * hourlyRate;
 double taxWithheld = grossPay * taxRate;
 double takeHomePay = grossPay - taxWithheld;
-Console.WriteLine($"Gross pay: {grossPay.ToString("C")}"); // Calculates User gross pay, taxes withheld from pay, and how much pay they take home.
+Console.WriteLine($"Gross pay: {grossPay.ToString("C")}");
 Console.WriteLine($"Tax withheld: {taxWithheld.ToString("C")}");
 Console.WriteLine($"Take home pay: {takeHomePay.ToString("C")}");
 System.Console.WriteLine();
@@ -72,7 +69,6 @@ double tripTotal = fuelCost + pizzaTotalCost;
 double costPerPerson = tripTotal / peopleGoing;
 double takeHomePayPerHour = takeHomePay / hours;
 double hoursToWork = costPerPerson / takeHomePayPerHour;
-
 
 // Summary combines the total cost of the trip, the cost for each person, how much the user takes home per hour, and how many hours they need to work in order to cover their share.
 Console.WriteLine($"Trip total: {tripTotal.ToString("C")}");
